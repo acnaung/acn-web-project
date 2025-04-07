@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Fleetstyles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo Image -->
+        <div class="logo-container">
+            <img src="/Fleetimages/FleetMgmt_logo_card.png" alt="FleetSaver Logo" class="logo-image">
+        </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Services.html">Our Services</a></li>
+                <li><a href="ReportandService.html">Report Accident/Hire Car</a></li>
+                <li><a href="member.html">Member Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+    </nav>
+
+    <!-- Contact button section-->
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/Fleetimages/background_2.jpeg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .image-row {
+        display: flex;
+        gap: 10px; /* Adds some space between images */
+        justify-content: center; /* Centers the row */
+        }
+
+        .image-row img {
+        width: 150px; /* Set the width */
+        height: 150px; /* Set the height */
+        object-fit: cover; /* Maintains aspect ratio within the set dimensions */
+        border: 1px solid #ddd; /* Optional: adds a border */
+    }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .popup input,
+        .popup textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .popup input[type="submit"] {
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+        .popup input[type="submit"]:hover {
+            background-color: #666;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+        .open-popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class="open-popup" onclick="openPopup()">Contact Us</button>
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+    
+    <!-- Services Section -->
+    <section class="our-services py-5">
+        <div class="container">
+            <h1 class="text-center">Our Services</h1>
+            <br>
+
+            <!-- First Row (3 Columns) -->
+            <div class="row">
+                <div class="col">
+                    <h2>Hire Car</h2>
+                    <img src="/Fleetimages/crash-1.jpeg" alt="Hire Car" class="img-fluid" style="width: 400px; height: 150px; object-fit: cover">
+                    <p>Hire a Car with Private Fleet
+                        Friendly support team available for assistance.
+                        Flexible hire options: short-term or long-term rentals.
+                        Transparent pricing with no hidden fees.
+                        Competitive rates tailored to your budget.
+                        Choose Private Fleet for a stress-free car hire experience. 
+                        Drive with confidence and discover the freedom to travel on your terms!</p>
+                </div>
+                <div class="col">
+                    <h2>Roadside Assistance</h2>
+                    <img src="/Fleetimages/RA_1.jpeg" alt="Roadside Assistance" class="img-fluid" style="width: 400px; height: 150px; object-fit: cover">
+                    <p>Roadside Assistance with Private Fleet Stay worry-free on the road with our 
+                        24/7 roadside assistance. From breakdowns to flat tires and towing, we ensure fast, 
+                        reliable support wherever you are. With Private Fleet, help is just a call away—giving 
+                        you peace of mind and confidence every mile of your journey.</p>
+                </div>
+                <div class="col">
+                    <h2>Fixed Price Maintenance</h2>
+                    <img src="/Fleetimages/Fleet_maintenance.jpeg" alt="Fixed Price Maintenance" class="img-fluid" style="width: 400px; height: 150px; object-fit: cover">
+                    <p>Fixed Price Maintenance with Private Fleet Enjoy predictable car care with 
+                        our fixed price maintenance plans. Covering servicing, repairs, and essential checks, 
+                        we ensure no surprise costs. Transparent pricing, skilled technicians, and premium service 
+                        guarantee peace of mind and optimal performance for your vehicle—keeping you on the road without breaking the bank.</p>
+                </div>
+            </div>
+
+            <!-- Second Row (3 Columns) -->
+            <div class="row">
+                <div class="col">
+                    <h2>Earn More with Us</h2>
+                    <img src="/Fleetimages/start_rental_business.jpeg" alt="Earn More with Us" class="img-fluid" style="width: 400px; height: 150px; object-fit: cover">
+                    <p>Earn More with Us Maximize your income by partnering with Private Fleet. 
+                        Whether you’re a driver or vehicle owner, our platform connects you to high-demand 
+                        opportunities. Flexible schedules, competitive rates, and seamless support 
+                        ensure you earn more while working on your terms. Start your journey toward greater 
+                        financial success today!</p>
+                </div>
+                <div class="col">
+                    <h2>Find Driver for Your Car</h2>
+                    <img src="/Fleetimages/find_driver.jpeg" alt="Find Driver for Your Car" class="img-fluid" style="width: 400px; height: 150px; object-fit: cover">
+                    <p>Find a Driver for Your Car Need a professional driver for your vehicle? 
+                        Private Fleet makes it simple to connect with skilled, reliable drivers 
+                        tailored to your needs. Whether for personal or business use, we ensure safety, 
+                        expertise, and convenience. Let us find the perfect match for your car and requirements effortlessly.</p>
+                </div>
+                <div class="col">
+                    <h2>Prompt Repairs</h2>
+                    <img src="/Fleetimages/prompt_repair.jpeg" alt="Prompt Repairs" class="img-fluid" style="width: 400px; height: 150px; object-fit: cover">
+                    <p>Prompt Repairs with Private Fleet Get back on the road quickly with our reliable repair 
+                        service. Skilled technicians, quality parts, and efficient turnaround times 
+                        ensure minimal disruption. From minor fixes to major repairs, we guarantee transparency, 
+                        professionalism, and excellent value. Experience hassle-free vehicle maintenance with 
+                        Private Fleet’s trusted repair solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Road Assistance Service Form -->
+    <section class="road-assistance py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Road Assistance Service</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="Enter first name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" id="lastName" class="form-control" placeholder="Enter last name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter phone number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rego" class="form-label">Vehicle Rego Number</label>
+                    <input type="text" id="rego" class="form-control" placeholder="Enter rego number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="vehicleMake" class="form-label">Vehicle Make</label>
+                    <input type="text" id="vehicleMake" class="form-control" placeholder="Enter vehicle make" required>
+                </div>
+                <div class="mb-3">
+                    <label for="vehicleModel" class="form-label">Vehicle Model</label>
+                    <input type="text" id="vehicleModel" class="form-control" placeholder="Enter vehicle model" required>
+                </div>
+                <div class="mb-3">
+                    <label for="vehicleYear" class="form-label">Vehicle Year</label>
+                    <input type="number" id="vehicleYear" class="form-control" placeholder="Enter vehicle year" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Service Providers -->
+    <section class="service-providers py-5">
+        <div class="container">
+            <h2 class="text-center">Our Service Providers</h2>
+            <div class="row">
+                <div class="col"><img src="/Fleetimages/RAC_Logo.jpg" alt="RAC" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/aami_logo.jpeg" alt="AAMI" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/Lorem tow&recovery.jpeg" alt="Towers" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/youi_logo.jpeg" alt="Nationwide Tour" class="img-fluid"></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Our Work with Customers -->
+    <section class="work-with-customers py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Work with Customers</h2>
+            <div class="row">
+                <div class="col"><img src="/Fleetimages/bonnet repair.jpeg" alt="Repair 1" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/door repair and paint.jpeg" alt="Repair 2" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/Auto-Body-Repair-1.jpg" alt="Repair 3" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/Car-scraper-dent repair.jpg" alt="Repair 4" class="img-fluid"></div>
+            </div>
+            <div class="row">
+                <div class="col"><img src="/Fleetimages/fleet_availibility-1.jpeg" alt="Maintenance 1" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/fleet_availibility-2.jpeg" alt="Maintenance 2" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/fleet_availibility-3.jpeg" alt="Maintenance 3" class="img-fluid"></div>
+                <div class="col"><img src="/Fleetimages/fleet_availibility-xl.jpeg" alt="Maintenance 4" class="img-fluid"></div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="py-3 bg-dark text-center text-white">
+        <p>&copy; 2025 Private Fleet - All Rights Reserved</p>
+    </footer>
+    
+    
+    
+</body>
+</html>

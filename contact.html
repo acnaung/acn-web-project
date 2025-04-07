@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('http://dbs.ba/wp-content/uploads/2017/05/fleet-3.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex; /* Enable flex box */
+            flex-direction: column; /* Aligns children in a vertical stack */
+            align-items: center; /* Center elements horizontally */
+        }
+        .form-container label {
+            width;100; /* Ensures labels are on their own line */
+            text-align: left; /* Align labels to left for readability */
+        }
+        .form-container input,
+        .form-container textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            
+        }
+        .form-container input[type="submit"] {
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+            width: 100%; /* Ensures button is full width */
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #666;
+        }
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .links a {
+            color: #00f;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="Services.html">Our Service</a>
+            <a href="ReportandService.html">Services</a>
+            <a href="Member.html">Member</a>
+        </div>
+    </div>
+</body>
+</html>

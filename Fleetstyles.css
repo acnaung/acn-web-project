@@ -1,0 +1,54 @@
+ /* Custom styles */
+ .navbar {
+    display: flex; /* Align items in a horizontal row */
+    flex-direction: column; /* Align logo above the menu */
+    justify-content: space-around; /* Space out the items evenly */
+    align-items: center; /* Align items vertically in the center */
+    background-color: black; /* Optional: Navbar background color */
+    padding: 10px 20px; /* Add spacing around the navbar */
+}
+
+.navbar ul {
+    list-style: none; /* Remove default list styling & change listing to horizontal*/
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align list items horizontally */
+    gap: 20px; /* Add space between menu items */
+}
+
+.navbar ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-size: 16px; /* Font size for links */
+    padding: 5px 10px; /* Add padding around the links */
+    border-radius: 5px; /* Optional: Rounded edges for links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar ul li a:hover {
+    background-color: #0056b3; /* Change background on hover */
+    color: #fff; /* Keep text white */
+}
+
+/* Logo Styles */
+.logo-container {
+    text-align: center; /* Center the logo above the menu */
+    margin-bottom: 10px; /* Add spacing between the logo and the menu */
+}
+
+.logo-image {
+    max-width: 120px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it centers properly */
+    margin: 0 auto; /* Centers the logo horizontally */
+}
+.car-frame {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Fleetstyles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo Image -->
+        <div class="logo-container">
+            <img src="/Fleetimages/FleetMgmt_logo_card.png" alt="FleetSaver Logo" class="logo-image">
+        </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Services.html">Our Services</a></li>
+                <li><a href="ReportandService.html">Report Accident/Hire Car</a></li>
+                <li><a href="member.html">Member Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+    </nav>
+
+    <!-- Contact button section-->
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/Fleetimages/members-benefit.png'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden; /* Ensures pseudo-element doesn't overflow */
+        }
+        .background::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/Fleetimages/members-benefit.png');
+        background-size: 25%;
+        background-position: center;
+        opacity: 0.25; /* Adjust this value for opacity */
+        z-index: -1; /* Keeps the background behind other elements */
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .popup input,
+        .popup textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .popup input[type="submit"] {
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+        .popup input[type="submit"]:hover {
+            background-color: #666;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+        .open-popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class="open-popup" onclick="openPopup()">Contact Us</button>
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+    
+    <!-- Member Services Section -->
+    <section class="member-services-section py-5">
+        <div class="container">
+            <h1 class="text-center">Member Services</h1>
+            <br>
+
+            <!-- Member Benefits -->
+            <div class="row">
+                <div class="col">
+                    <h2>Priority Support</h2>
+                    <p>Enjoy 24/7 priority assistance for all your fleet needs.</p>
+                </div>
+                <div class="col">
+                    <h2>Discounts on Repairs</h2>
+                    <p>Get exclusive discounts for vehicle maintenance and repair services.</p>
+                </div>
+                <div class="col">
+                    <h2>Fleet Performance Reports</h2>
+                    <p>Access detailed reports to optimize fleet performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Form -->
+    <section class="subscribe-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Subscribe to Membership</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="memberName" class="form-label">Full Name</label>
+                    <input type="text" id="memberName" class="form-control" placeholder="Enter full name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter phone number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="membershipType" class="form-label">Membership Type</label>
+                    <select id="membershipType" class="form-select">
+                        <option value="basic">Basic</option>
+                        <option value="premium">Premium</option>
+                        <option value="enterprise">Enterprise</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Member Testimonials -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <br>
+            
+            <h2 class="text-center">What Our Members Say</h2>
+            <br>
+            <br>
+            
+            <div class="row">
+                <div class="col">
+                    <p>"FleetSaver has completely transformed how we manage our vehicles!"</p>
+                    <p>- Member A</p>
+                </div>
+                <div class="col">
+                    <p>"Exceptional customer service and great benefits for members."</p>
+                    <p>- Member B</p>
+                </div>
+                <div class="col">
+                    <p>"The priority support alone makes the membership worth it."</p>
+                    <p>- Member C</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="py-3 bg-dark text-center text-white">
+        <p>&copy; 2025 Private Fleet - All Rights Reserved</p>
+    </footer>
+    
+    
+    
+</body>
+</html>
